@@ -9,10 +9,13 @@ class CreatePostsTable extends Migration {
 	{
 		Schema::create('posts', function(Blueprint $table) {
 			$table->increments('id');
+            $table->integer('user_id')->default(1);
 			$table->string('title');
-			$table->string('content');
+			$table->longText('content');
 			$table->integer('category_id')->unsigned();
 			$table->string('featured');
+            $table->string('slug');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

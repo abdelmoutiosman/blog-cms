@@ -28,6 +28,22 @@
                                 <label for="content">Content</label>
                                 <textarea class="form-control" name="content" rows="8" cols="8"></textarea>
                             </div>
+                            <div class="form-check">
+                                @foreach($tags as $tag)
+                                    <input class="form-check-input" type="checkbox" value="{{$tag->id}}" name="tag[]">
+                                    <label class="form-check-label">
+                                        {{$tag->tag}}
+                                    </label><br>
+                                @endforeach
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select class="form-control" name="category_id">
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="featured">featured</label>
                                 <input type="file" class="form-control-file" name="featured">

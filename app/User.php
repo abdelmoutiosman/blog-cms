@@ -5,9 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laratrust\Traits\LaratrustUserTrait;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
+    use LaratrustUserTrait;
     use Notifiable;
 
     /**
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','admin'
     ];
 
     /**
@@ -36,4 +38,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+//    public function profile()
+//    {
+//        return $this->hasOne('App\Models\Profile');
+//    }
+//    public function roles()
+//    {
+//        return $this->belongsToMany('App\Role');
+//    }
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post');
+    }
 }
