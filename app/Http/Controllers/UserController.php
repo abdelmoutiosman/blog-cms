@@ -20,7 +20,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $records=User::all();
+        $records=User::where('admin',0)->get();
         return view('users.index',compact('records'));
     }
 

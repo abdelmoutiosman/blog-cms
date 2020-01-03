@@ -9,8 +9,8 @@ return array(
     "host"=>"smtp.mailtrap.io",
     "port"=>"2525",
     "from"=>array(
-            'address' =>"from@example.com",
-            'name' => "Example",
+        'address' =>"from@example.com",
+        'name' => "Example",
     ),
     "username"=>"05c5a206fdf139",
     "password"=>"0244b91cc3bbde",

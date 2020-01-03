@@ -37,8 +37,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{url(route('user.index'))}}">show</a>
                                 <a class="dropdown-item" href="{{url(route('user.create'))}}">Create</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
                     </ul>
@@ -50,8 +48,6 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url(route('setting.index'))}}">show</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
                 </ul>
@@ -63,8 +59,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url(route('category.index'))}}">show</a>
                             <a class="dropdown-item" href="{{url(route('category.create'))}}">Create</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
                 </ul>
@@ -76,8 +70,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url(route('tag.index'))}}">show</a>
                             <a class="dropdown-item" href="{{url(route('tag.create'))}}">Create</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
                 </ul>
